@@ -74,18 +74,85 @@ button:hover{
 }
 .headline{
     font-size: 3rem;
+    position: relative;
+    animation: appear1;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes appear1 {
+    0%{
+        opacity: 0;
+        color: #7bcdc4;
+        left: -8rem;
+    }
+    65%{
+        left: 2rem;
+        color: #7bcdc4;
+    }
+    100%{
+        opacity: 1;
+        color: white;
+        left: 0rem;
+    }
 }
 .subheadline{
     font-size: 1.5rem;
     margin:0.3rem 0 1rem 0;
+    position: relative;
+    animation: appear2;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes appear2 {
+    0%{
+        opacity: 0;
+        color: #3d9187;
+        
+        letter-spacing: 0.15rem;
+    }
+    100%{
+        opacity: 1;
+        color: white;
+        letter-spacing: 0rem;
+    }
 }
 .learn{
     transition: 0.1s;
+    animation: appear3;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    transition: 0.1s;
+}
+@keyframes appear3 {
+    0%{
+        opacity: 0;
+        /* transform: scale(0.6); */
+
+    }
+    100%{
+        opacity: 1;
+        /* transform: scale(1); */
+    }
 }
 .learn:hover{
     transform: scale(1.1);
+    /* animation: hov;
+    animation-duration: 0.1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; */
     box-shadow: 0 0px 7px 3px black;
 }
+/* @keyframes hov {
+    frim{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.1);
+    }
+} */
 .scroll{
     position:absolute;
     bottom: 1rem;
@@ -286,6 +353,10 @@ footer{
     }
     .headline{
         text-align: center;
+        font-size: 2.7rem;
+    }
+    .subheadline{
+        font-size: 1.2rem;
     }
     .price{
         display: grid;
